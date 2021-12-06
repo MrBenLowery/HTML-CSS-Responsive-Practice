@@ -3,7 +3,7 @@
 	padding: 0;
 	margin: 0;
 	max-width: 100%;
-	border: 1px solid grey;
+	/* border:1px solid grey; */
 }
 html {
 	font-size: 62.5%;
@@ -21,6 +21,7 @@ h3 {
 	font-family: "Oxygen", sans-serif;
 	text-align: center;
 	letter-spacing: 3px;
+	margin-bottom: 3%;
 }
 h1 {
 	font-size: 6rem;
@@ -120,10 +121,10 @@ nav {
 	margin-right: 10%;
 }
 
+/*Shop Section Styles*/
 #shop {
 	padding-bottom: 0;
 }
-
 .container {
 	display: flex;
 	flex-wrap: wrap;
@@ -133,16 +134,14 @@ nav {
 .succulants,
 .tropicals {
 	width: 50%;
+	height: 60vh;
 }
-
 .text {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 6%;
 	text-align: center;
 }
-
 .text div {
 	width: 60%;
 }
@@ -156,9 +155,9 @@ nav {
 }
 .tropicals {
 	background-image: url("../images/tropicals.jpg");
-	background-position: bottom;
+	background-position: center;
 }
-
+/*Footer Section Styles*/
 footer {
 	background-color: #266035;
 	display: flex;
@@ -184,7 +183,6 @@ footer a {
 .left div {
 	width: 50%;
 	line-height: 2.5;
-	text-align: left;
 }
 .right img {
 	width: 50%;
@@ -195,4 +193,112 @@ footer a {
 }
 .bottom p {
 	margin: 3% 5% 0 0;
+}
+
+/*Media Queries*/
+/*
+max-width - desktop first when you are scaling down to mobile
+min-width is mobile first - when you are scaling up to desktop
+*/
+/*Tablet*/
+/*apply these styles to anything 800px or smaller*/
+@media (max-width: 800px) {
+	nav {
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-bottom: 2%;
+	}
+	.links {
+		width: 100%;
+	}
+	.logo img {
+		width: 100%;
+	}
+	/*top section styles*/
+	#top {
+		margin-top: 12%;
+	}
+	/*about section styles*/
+	#about {
+		background-image: none;
+		background-color: #dedfe0;
+		justify-content: center;
+		height: auto;
+		padding: 8% 0;
+	}
+	#about div {
+		width: 80%;
+		margin-right: 0;
+	}
+	.left div {
+		width: 80%;
+	}
+}
+
+/*Phone*/
+
+@media (max-width: 500px) {
+	.logo {
+		width: 10%;
+	}
+	#top {
+		margin-top: 18%;
+	}
+	.container {
+		justify-content: center;
+	}
+	.one {
+		order: 1;
+		width: 90%;
+	}
+	.two {
+		order: 2;
+		width: 90%;
+	}
+	.three {
+		order: 3;
+		width: 90%;
+	}
+	.four {
+		order: 4;
+		width: 90%;
+	}
+	.five {
+		order: 5;
+		width: 90%;
+	}
+	.six {
+		order: 6;
+		width: 90%;
+	}
+	.text div {
+		width: 90%;
+	}
+	/*footer section styles*/
+	.left,
+	.right {
+		width: 100%;
+	}
+	footer h2 {
+		order: -2;
+	}
+	.right {
+		order: -1;
+	}
+	.right img {
+		width: 60%;
+	}
+	.left div {
+		width: 100%;
+		text-align: center;
+	}
+	footer h3 {
+		text-align: center;
+	}
+	.bottom {
+		text-align: center;
+	}
+	.bottom p {
+		margin-right: 0;
+	}
 }
